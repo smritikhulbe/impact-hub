@@ -9,6 +9,21 @@
   font-size: 64px; /* or any other desired size */
 }
 
+.empowering-communities{
+  font-size: xx-large;
+  text-align:center;
+}
+
+.fostering-unity{
+  font-size: xx-large;
+  text-align:center;
+}
+
+.empowering-individuals{
+  font-size: xx-large;
+  text-align:center;
+}
+
 body {
   background-color: #FFFFFF; /* white */
   font-family: "Oswald";
