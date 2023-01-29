@@ -74,3 +74,31 @@ head, link, a {
 div {
   text-align: center;
 }
+.alignment {
+    position: relative;
+}
+.text-left {
+    display: inline-block;
+    float: left;
+}
+.image-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alignment {
+    display: flex;
+    overflow: visible;
+}
+/*h1 {
+    text-align: left;
+}*/
+img {
+    margin: 0 auto;
+}
+.headerofsite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
