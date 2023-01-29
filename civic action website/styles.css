@@ -1,105 +1,130 @@
+/* Imports the Oswald font from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+/*Set the font family and color for all elements on the page to "Oswald" and #2C4259*/
 * {
-  font-family: "Oswald";
-  color: #2C4259;
-}
-/*@import url('https://fonts.googleapis.com/css?family=Shrikhand');
-title{
-    font-family: 'Shrikhand';
+    font-family: "Oswald";
     color: #2C4259;
-}*/
+  }
 
-.impact-hub {
-  font-size: 64px; /* or any other desired size */
-}
+/* Defines the class for the "impact-hub" section by setting the font size. */
+.impact-hub 
+  {
+    font-size: 64px; 
+  }
 
-.empowering-communities{
-  font-size: xx-large;
-  text-align:center;
-}
+/* Defines the class for the "empowering-communities" section by setting the font size and text alignment. */
+.empowering-communities
+  {
+    font-size: xx-large;
+    text-align:center;
+  }
 
-.fostering-unity{
-  font-size: xx-large;
-  text-align:center;
-}
+/* Defines the class for the "fostering-unity" section by setting the font size and text alignment. */
+.fostering-unity
+  {
+    font-size: xx-large;
+    text-align:center;
+  }
 
-.empowering-individuals{
-  font-size: xx-large;
-  text-align:center;
-}
+/* Defines the class for the "empowering-individuals" section by setting the font size and text alignment. */
+.empowering-individuals
+  {
+    font-size: xx-large;
+    text-align:center;
+  }
 
-body {
-  background-color: #4CEFB4; /* white */
-  font-family: "Oswald";
-}
+/*Sets the body's background color to #4CEFB4 font-family set to "Oswald"*/
+body 
+  {
+    background-color: #4CEFB4; 
+    font-family: "Oswald";
+  }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.header {
-  text-align:center;
-  font-size:2em;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.header a {
-  color: inherit;
-  text-decoration: none;
-}
-
-head, link, a {
-  font-size: 1em;
-  line-height: 1.5;
-  margin: 20px 0;
-}
-
-.header {
-  text-align:center;
-  font-size:2em;
-  font-weight: bold;
-}
-
-.navbar {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-div {
-  text-align: center;
-}
-.alignment {
-    position: relative;
-    font-size: 32px; 
-}
-.text-left {
-    display: inline-block;
-    float: left;
-}
-.image-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-img {
+/*Defines the class for the "container" section by setting the maximum width of the container to 800px, centering it, and adding 20px of padding.*/
+.container 
+  {
+    max-width: 800px;
     margin: 0 auto;
-}
-.headerofsite {
+    padding: 20px;
+  }
+
+/* Defines the class for the "header" section and sets the text alignment to center, font size to 2em, font-weight to bold and cursor to pointer. */
+.header 
+  {
+    text-align:center;
+    font-size:2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+/* Defines the class for the "header a" class and sets the color and text-decoration of links within the header to inherit 
+(use the color value of the parent element) and none respectively. */
+.header a 
+  {
+    color: inherit;
+    text-decoration: none;
+  }
+
+/*The head, link and a elements have their font size set to 1em, line-height set to 1.5 and margin set to 20px 0.*/
+head, link, a 
+  {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+
+/*Defines the class for the "navbar" section and sets the font size to 24px, displays the elements as a flex container, aligns the items in the center,
+ and justifies the content between them.*/
+.navbar 
+  {
+    font-size: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: space-between;
+  }
 
-/*.alignment {
-    display: flex;
-    overflow: visible;
-}*/
-/*h1 {
-    text-align: left;
-}*/
+/*The div element's text-align is set to center.*/
+div 
+  {
+    text-align: center;
+  }
+  
+/*Defines the class for the "alignment" section by setting the position as relative and the font-size as 32px.*/
+.alignment 
+  {
+      position: relative;
+      font-size: 32px; 
+  }
+
+/*Defines the class for "text-left" section by setting the display as inline-block and float left*/
+.text-left 
+  {
+      display: inline-block;
+      float: left;
+  }
+
+/*Defines the class for the "image-center" section by class sets the position as absolute, left to 50%, and transform to translateX(-50%).*/
+.image-center 
+  {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+/*The img element's are set to 0 on the top and bottom and "auto" on the right and left. 
+This centers the images horizontally within their container and removes any space above or below the image.*/
+img 
+  {
+      margin: 0 auto;
+  }
+
+/*Defines the class for the "headerofsite" section by  setting the elements to display as flex container, 
+which allows the elements to be aligned in any direction and take up any amount of space within the container. 
+It also aligns the items in the center vertically using "align-items: center" and horizontally using "justify-content: center" properties. */
+.headerofsite 
+  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
