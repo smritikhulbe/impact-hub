@@ -1,33 +1,48 @@
-function createMarker(map, position, content) {
+function createMarker(map, position, content, infowindow) {
     const marker = new google.maps.Marker({
         position: position,
         map: map
     });
-    const infowindow = new google.maps.InfoWindow({
-        content: content
-    });
+
     marker.addListener('click', function() {
+        infowindow.setContent(content);
         infowindow.open(map, marker);
     });
+
+    google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+    });
+
     return marker;
 }
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8
+        center: { lat: 44.9479, lng: -93.3056 },
+        zoom: 10
     });
-    const contentString = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading" class="firstHeading">Marker Description</h1>' +
-        '<div id="bodyContent">' +
-        '<p>Here is some information about the marker.</p>' +
-        '</div>' +
-        '</div>';
-    createMarker(map, { lat: -34.397, lng: 150.644 }, contentString)
-    google.maps.event.addListener(map, 'click', function() {
-        infowindow.close();
-    });
+  
+    const infowindow = new google.maps.InfoWindow();
+    var title = "Marker Description";
+    var description = "Here is some information about the marker.";
+
+  const eventNames = ["Coastal Cleanup Day", "Plant a Tree", "Homeless Outreach Program", "Animal in Need", "Senior Citizen Support", "Community Garden Initiative", "Kids' Reading Program", "Disaster Relief Effort", "Veterans Support Program", "Community Food Drive"];
+  const eventDescriptions = [ "Where volunteers gather to remove trash and debris from local beaches and coastlines", "Where volunteers gather to plant trees in local parks and community spaces", "Where volunteers assist in distributing food, clothing, and other essentials to homeless individuals in the community", "Where volunteers assist in caring for and providing enrichment activities for animals in shelters or rescue organizations", "Where volunteers assist in providing companionship and assistance to elderly individuals in the community", "Where volunteers gather to build and maintain community gardens in underprivileged neighborhoods", "Where volunteers read to and assist children with reading and literacy skills", "Where volunteers assist in rebuilding and providing aid to communities affected by natural disasters", "Where volunteers assist in providing support and resources for veterans and their families", "Where volunteers gather and collect non-perishable food items to be distributed to those in need within the community"];
+  const latitude = [44.9479, 44.9594, 44.8208, 44.8924, 44.9761, 44.9406, 44.9153, 44.8987, 44.8917, 44.9652 ];
+  const longitude = [-93.3056, -93.1247, -93.1408, -93.2623, -93.1393, -93.2489, -93.3249, -93.2238, -93.1587, -93.2935];
+  
+  for(let i = 0; i <10; i++)
+    {
+    createMarker(map, { lat:latitude[i], lng:longitude[i] }, `
+    <div id="content">
+        <div id="siteNotice">
+        </div>
+        <h1 id="firstHeading" class="firstHeading">${eventNames[i]}</h1>
+        <div id="bodyContent">
+            <p>${eventDescriptions[i]}</p>
+        </div>
+    </div>`, infowindow)
+    }
+
 }
 initMap();

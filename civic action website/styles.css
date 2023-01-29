@@ -4,6 +4,11 @@
   font-family: "Oswald";
   color: #2C4259;
 }
+/*@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+*{
+    font-family: 'Shrikhand';
+    color: #2C4259;
+}*/
 
 .impact-hub {
   font-size: 64px; /* or any other desired size */
@@ -25,7 +30,7 @@
 }
 
 body {
-  background-color: #FFFFFF; /* white */
+  background-color: #4CEFB4; /* white */
   font-family: "Oswald";
 }
 
