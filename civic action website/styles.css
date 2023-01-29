@@ -5,7 +5,7 @@
   color: #2C4259;
 }
 /*@import url('https://fonts.googleapis.com/css?family=Shrikhand');
-*{
+title{
     font-family: 'Shrikhand';
     color: #2C4259;
 }*/
@@ -76,6 +76,7 @@ div {
 }
 .alignment {
     position: relative;
+    font-size: 32px; 
 }
 .text-left {
     display: inline-block;
@@ -86,14 +87,6 @@ div {
     left: 50%;
     transform: translateX(-50%);
 }
-
-.alignment {
-    display: flex;
-    overflow: visible;
-}
-/*h1 {
-    text-align: left;
-}*/
 img {
     margin: 0 auto;
 }
@@ -102,3 +95,11 @@ img {
     align-items: center;
     justify-content: center;
 }
+
+/*.alignment {
+    display: flex;
+    overflow: visible;
+}*/
+/*h1 {
+    text-align: left;
+}*/
